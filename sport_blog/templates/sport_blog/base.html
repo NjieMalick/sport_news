@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>Football for life</title>
+	<link rel="stylesheet" href="{% static 'css/sport_blog.css' %}">
+	<meta charset="UTF-8">
+</head>
+
+<body> 
+   
+	<div class="topnav">
+		<ul>
+			<li><a class="" href="">Home</a></li>
+			<li><a href="premierleague/">Premier league</a></li>
+			<li><a href="spanishleague/">La liga</a></li>
+			<li><a href="italianleague/">Seria A</a></li>
+			<li><a href="frenchleague">League 1</a></li>
+			<li><a href="bundasleague">Bundas league</a></li>
+			<li><a href="championsleague">Champions league</a></li>
+			<li><a href="contact">Contact</a></li>
+		</ul>
+	</div>
+
+	<div class="header">
+	    <h1>Football for life</h1>
+	</div>
+
+	<div class="column1">
+		<div class="name">
+			<a href="#home"><h1>Malick <span>Njie</span></h1></a>
+		</div>
+		<div class="subscribe">
+			<h3>Subscribe for newsletter</h3>
+			<form>
+				<input type="text" name="subscribe" placeholder="Enter email for newsletter">
+			</form>
+		</div>
+	</div>
+	  {% block content %}
+	  {% endblock content%}
+</body>
+</html>

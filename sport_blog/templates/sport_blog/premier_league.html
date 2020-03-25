@@ -1,0 +1,22 @@
+{% extends 'sport_blog/base.html'%}
+
+{% block content %}
+    
+<div class="column2">   
+    {% for post in posts %}
+        {{ post.published_date }}
+        <a href="{% url 'england'%}"><h3>{{ post.title}}</h3></a>
+        <p>{{ post.text|linebreaksbr }}</p>
+    {% endfor %}
+ </div>
+
+ <div class="column3">
+     {% for minipost in miniposts %}
+        <a href=""><h5>{{ minipost.title }}</h5></a>
+        <p>{{ minipost.text }}</p>
+     {% endfor %}
+
+ </div>
+
+{% endblock content%}
+
