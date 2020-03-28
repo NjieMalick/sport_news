@@ -1,11 +1,8 @@
+from django.core.urlresolvers import reverse
 from django.test import TestCase
 
-
-class PostTests(TestCase):
-    def test_post_list_status_code(self):
-        response = self.client.get('/')
-        self.assertEqual(response.status_code, 200)
-
-    def test_premierleague_status_code(self):
-        response = self.client.get('/about/')
-        self.assertEqual(response.status_code, 200)
+class HomeTests(TestCase):
+    def test_home_view_status_code(self):
+        url = reverse('england')
+        response = self.client.get(url)
+        self.assertEquals(response.status_code, 200)

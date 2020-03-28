@@ -2,43 +2,45 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
+ <head>
+ 	
 	<title>Football for life</title>
-	<link rel="stylesheet" href="{% static 'css/sport_blog.css' %}">
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{% static 'css/sport_blog.css' %}">
+
 </head>
 
 <body> 
    
-	<div class="topnav">
-		<ul>
-			<li><a class="" href="">Home</a></li>
-			<li><a href="premierleague/">Premier league</a></li>
-			<li><a href="spanishleague/">La liga</a></li>
-			<li><a href="italianleague/">Seria A</a></li>
-			<li><a href="frenchleague">League 1</a></li>
-			<li><a href="bundasleague">Bundas league</a></li>
-			<li><a href="championsleague">Champions league</a></li>
-			<li><a href="contact">Contact</a></li>
-		</ul>
-	</div>
-
 	<div class="header">
-	    <h1>Football for life</h1>
+		<a href="{% url 'home' %}" class="logo">Football for Life</a>
+		<div class="header-right">
+			<a href="{% url 'home' %}">Home</a>
+			<a href="{% url 'england' %}">Premier league</a>
+			<a href="{% url 'spain' %}">La liga</a>
+			<a href="{% url 'italy' %}">Seria A</a>
+			<a href="{% url 'france' %}">League 1</a>
+			<a href="{% url 'germany' %}">Bundas league</a>
+			<a href="{% url 'Champions' %}">Champions league</a>
+			<a href="{% url 'contact' %}">Contact</a>
+		</div>
 	</div>
 
 	<div class="column1">
-		<div class="name">
+		<div id="" ="name">
 			<a href="#home"><h1>Malick <span>Njie</span></h1></a>
 		</div>
-		<div class="subscribe">
-			<h3>Subscribe for newsletter</h3>
+		<div id="subscribe">
+			<h3>Subscribe for new posts</h3>
 			<form>
 				<input type="text" name="subscribe" placeholder="Enter email for newsletter">
 			</form>
 		</div>
 	</div>
+
 	  {% block content %}
 	  {% endblock content%}
+
 </body>
 </html>

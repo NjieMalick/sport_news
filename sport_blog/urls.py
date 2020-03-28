@@ -7,13 +7,13 @@ from . import views
 
 
 urlpatterns = [
-	path('', Home.as_view(), name='home'),
-	path('premierleague/', PremierLeague.as_view(), name='england'),
-	path('spanishleague/', SpanishLeague.as_view(), name='spain'),
-	path('italianleague/', ItalianLeague.as_view(), name='italy'),
-	path('frenchleague/', FrenchLeague.as_view(), name='france'),
-	path('bundasleague/', BundasLeague.as_view(), name='germany'),
-	path('championsleague/', ChampionsLeague.as_view(), name='Champions'),
-	path('contact/', Contact.as_view(), name='contact'),
+	path('', HomeView.as_view(template_name='sport_blog/home.html'), name="home"),
+	path('premierleague/', PremierLeagueView.as_view(template_name='sport_blog/premier_league.html'), name='england'),
+	path('spanishleague/', SpanishLeagueView.as_view(template_name='sport_blog/spanish_league.html'), name='spain'),
+	path('italianleague/', ItalianLeagueView.as_view(template_name='sport_blog/italian_league.html'), name='italy'),
+	path('frenchleague/', FrenchLeagueView.as_view(template_name='sport_blog/french_league.html'), name='france'),
+	path('bundasleague/', BundasLeagueView.as_view(template_name='sport_blog/bundas_league.html'), name='germany'),
+	path('championsleague/', ChampionsLeagueView.as_view(template_name='sport_blog/champions_league.html'), name='Champions'),
+	path('contactpage/', ContactView.as_view(template_name='sport_blog/contact.html'), name='contact'),
 
 ]
